@@ -6,6 +6,7 @@ public class test {
     Vector2 testVec2 = new Vector2(10, -5);
 
     Vector2 resultVec = testVec.Add(testVec2);
+    System.out.println(resultVec.print());
     }
 
 
