@@ -10,8 +10,7 @@ public class Vector2 {
    }
 
    public String print(){
-      double output = this.component1 + this.component2;
-      String stringOutput = String.valueOf(output);
+      String stringOutput = this.component1 + " / " + this.component2;
       return stringOutput;
    }
 
