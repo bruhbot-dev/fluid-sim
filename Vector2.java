@@ -23,7 +23,7 @@ public class Vector2 {
       return returnVector;
   }
 
-   public Vector2 Sub(Vector2 Vec1, Vector2 Vec2){
+   public Vector2 Sub(Vector2 Vec2){
 
       double component1 = this.component1 - Vec2.component1;
       double component2 = this.component2 - Vec2.component2;
