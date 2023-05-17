@@ -1,6 +1,7 @@
 public class ball{
-    private float _size;
-    private _PVector _location;
+    private float radius;
+    private positionVector location;
+    private sumForces
 
     void collisionDetection() {
         
