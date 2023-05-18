@@ -1,16 +1,18 @@
 public class Vector2 {
 
-   private double component1;
-   private double component2;
+   public double component1;
+   public double component2;
 
 
    public Vector2(double component1, double component2) {
       this.component1 = component1;
       this.component2 = component2;
+      System.out.println("test2");
    }
 
    public String print(){
       String stringOutput = this.component1 + " / " + this.component2;
+      System.out.println("test4");
       return stringOutput;
    }
 
