@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+import javax.print.attribute.standard.Copies;
 
 public class ball{
     private float radius;
@@ -24,5 +27,21 @@ public class ball{
         System.out.println("test3");
         return accelVec;
 
+    }
+
+    public Vector2 calcSumForces(ArrayList<Vector2> forceArray){
+        Vector2 copySumForces = this.sumForces;
+        for (Vector2 i: forceArray) {
+            copySumForces.Add(i);
+          }
+          return copySumForces;
+
+    public calcVeloc(){
+        
+    }
+
+    public Vector2 movePos(){
+
+    }
     }
 }
