@@ -1,2 +1,5 @@
 test
 https://levelup.gitconnected.com/creating-a-colliding-object-with-vector-physics-b784bed91505
+
+
+there will be a seperate physics object which is called in a loop and calculates all the physics for each ball
