@@ -7,6 +7,8 @@ public class ball{
     private Vector2 location;
     public Vector2 sumForces;
     private double mass;
+    private Vector2 velocity ;
+    private Vector2 accel; 
 
 
     
@@ -36,12 +38,15 @@ public class ball{
           }
           return copySumForces;
 
-    public calcVeloc(){
-        
-    }
+    public void calcVeloc(){
+        this.velocity.component1 = this.velocity.component1 * this.accel.component1;
+        this.velocity.component2 = this.velocity.component2 * this.accel.component2;
+
+
+     }
 
     public Vector2 movePos(){
 
     }
-    }
+    
 }
