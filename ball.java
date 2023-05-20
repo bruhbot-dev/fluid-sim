@@ -4,7 +4,7 @@ import javax.print.attribute.standard.Copies;
 
 public class ball{
     private float radius;
-    private Vector2 location;
+    private Vector2 position;
     public Vector2 sumForces;
     private double mass;
     private Vector2 velocity ;
@@ -35,8 +35,9 @@ public class ball{
         Vector2 copySumForces = this.sumForces;
         for (Vector2 i: forceArray) {
             copySumForces.Add(i);
-          }
+          
           return copySumForces;
+        }
 
     public void calcVeloc(){
         this.velocity.component1 = this.velocity.component1 * this.accel.component1;
@@ -45,8 +46,12 @@ public class ball{
 
      }
 
-    public Vector2 movePos(){
+    public Vector2 movePos(ArrayList<Vector2> outerforceArray){
+        calcSumForces(outerforceArray);
+        calcAccel();
+        calcVeloc();
 
+        return position;
     }
     
 }
