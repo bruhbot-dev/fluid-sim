@@ -4,7 +4,8 @@ public class test {
     public static void main(String[] args) {
     
     Vector2 emptyVec = new Vector2(0, 0);
-    Vector2 grav = new Vector2(9.8, 0);
+    Vector2 startPushVec = new Vector2(50, 70);
+    Vector2 grav = new Vector2(-9.8, 0);
     
     /*Vector2 testVec = new Vector2(10, -5);
     Vector2 testVec2 = new Vector2(10, -5);
@@ -26,11 +27,16 @@ public class test {
     ball testBall = new ball(1, emptyVec, emptyVec, 1);
 
 
+    ArrayList<Vector2> testArrayInitial = new ArrayList<Vector2>();
+    testArrayInitial.add(0, startPushVec);
+
     ArrayList<Vector2> testArray = new ArrayList<Vector2>();
     testArray.add(0, emptyVec);
     testArray.add(1, emptyVec);
 
 
+
+    testBall.movePos(testArrayInitial, grav);
     testBall.movePos(testArray, grav);
     testBall.movePos(testArray, grav);
     testBall.movePos(testArray, grav);
@@ -40,6 +46,12 @@ public class test {
     testBall.movePos(testArray, grav);
     testBall.movePos(testArray, grav);
     testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+
 
 
     }
