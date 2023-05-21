@@ -4,8 +4,9 @@ public class test {
     public static void main(String[] args) {
     
     Vector2 emptyVec = new Vector2(0, 0);
+    Vector2 grav = new Vector2(9.8, 0);
     
-    Vector2 testVec = new Vector2(10, -5);
+    /*Vector2 testVec = new Vector2(10, -5);
     Vector2 testVec2 = new Vector2(10, -5);
 
     Vector2 resultVec = testVec.Add(testVec2);
@@ -20,15 +21,26 @@ public class test {
     ball testBall = new ball(1, emptyVec, resultVec2, 1);
     
     Vector2 accelResultVec = testBall.calcAccel();
-    System.out.println(accelResultVec.print());
+    System.out.println(accelResultVec.print());*/
+
+    ball testBall = new ball(1, emptyVec, emptyVec, 1);
+
 
     ArrayList<Vector2> testArray = new ArrayList<Vector2>();
-    testArray.add(0, testVec);
-    testArray.add(1, testVec2);
+    testArray.add(0, emptyVec);
+    testArray.add(1, emptyVec);
 
-    testBall.movePos(testArray);
-    testBall.movePos(testArray);
-    testBall.movePos(testArray);
+
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+    testBall.movePos(testArray, grav);
+
 
     }
 
