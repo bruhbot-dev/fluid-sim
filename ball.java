@@ -34,10 +34,21 @@ public class ball{
 
         this.copySumForces = this.sumForces;
         this.sumForces = copySumForces.Add(grav);
+        //System.out.println("before:");
+        //System.out.println(sumForces.print());
+
         for (Vector2 i: forceArray) {
-            this.sumForces.Add(i);
+            //System.out.println("i:");
+            //System.out.println(i.print());
+            //System.out.println("sumforces before:");
+            //System.out.println(sumForces.print());
+            sumForces = sumForces.Add(i);
+            //System.out.println("sumforces after:");
+            //System.out.println(sumForces.print());
         }
 
+        //System.out.println("after");
+       // System.out.println(sumForces.print());
     }
 
     public void calcVeloc(){
@@ -57,6 +68,7 @@ public class ball{
         accel = calcAccel();
         calcVeloc();
         this.position = this.position.Add(this.velocity);
+        System.out.println("position:");
         System.out.println(this.position.print());
         return position;
     }
