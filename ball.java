@@ -52,7 +52,7 @@ public class ball{
      }
 
     public Vector2 movePos(ArrayList<Vector2> outerforceArray, Vector2 grav){
-        System.out.println(position.print());
+        //System.out.println(position.print());
         calcSumForces(outerforceArray, grav);
         accel = calcAccel();
         calcVeloc();
