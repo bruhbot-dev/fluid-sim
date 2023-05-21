@@ -30,25 +30,30 @@ public class ball{
 
     }
 
-    public Vector2 calcSumForces(ArrayList<Vector2> forceArray){
+    public void calcSumForces(ArrayList<Vector2> forceArray, Vector2 grav){
+
         this.copySumForces = this.sumForces;
+        this.sumForces = copySumForces.Add(grav);
         for (Vector2 i: forceArray) {
-            copySumForces.Add(i);
+            this.sumForces.Add(i);
         }
 
-        return copySumForces;    
     }
 
     public void calcVeloc(){
         this.velocity.component1 = this.velocity.component1 + this.accel.component1;
         this.velocity.component2 = this.velocity.component2 + this.accel.component2;
 
+        /*System.out.println("velocity:");
+        System.out.println(velocity.print());*/
+
+
 
      }
 
-    public Vector2 movePos(ArrayList<Vector2> outerforceArray){
+    public Vector2 movePos(ArrayList<Vector2> outerforceArray, Vector2 grav){
         System.out.println(position.print());
-        calcSumForces(outerforceArray);
+        calcSumForces(outerforceArray, grav);
         accel = calcAccel();
         calcVeloc();
         this.position = this.position.Add(this.velocity);
