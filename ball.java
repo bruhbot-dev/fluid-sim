@@ -4,10 +4,10 @@ import javax.print.attribute.standard.Copies;
 
 public class ball{
     private float radius;
-    private Vector2 position = new Vector2(0, 0);
+    public Vector2 position = new Vector2(0, 0);
     public Vector2 sumForces;
     private double mass;
-    private Vector2 velocity = new Vector2(0, 0);
+    public Vector2 velocity = new Vector2(0, 0);
     private Vector2 accel; 
     private Vector2 copySumForces;
 
@@ -73,4 +73,13 @@ public class ball{
         return position;
     }
     
+    public double getPosComp1(){
+        double returnpos1 = this.position.component1;
+        return returnpos1;
+    }
+
+    public double getPosComp2(){
+        double returnpos2 = this.position.component2;
+        return returnpos2;
+    }
 }
