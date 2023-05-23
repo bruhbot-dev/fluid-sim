@@ -32,6 +32,16 @@ public class Vector2 {
       return returnVector;
    }
 
+   public double getComponent1() {
+      return component1;
+   }
+
+   public double getComponent2() {
+      return component2;
+   }
+
+   
+
    /*double Multi(Vector2 Vec1, Vector2 Vec2){
 
    }  */
