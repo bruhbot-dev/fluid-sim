@@ -39,7 +39,7 @@ public class test {
     testArray.add(1, emptyVec);
 
 
-    new MyFrame(testBall);
+
 
 
     testBall.movePos(testArrayInitial, grav);
